@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacidad de endeudamiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3149425415986067"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="nave">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand color" href="index.html">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link color" href="cEndeudamiento.html">Calcula Tú Capacidad de endeudamiento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color" href="concejosFinancieros.html">Concejos Financieros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color" href="conCredito.html">Concejos para solicitar credito</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link color" href="eFinancieraB.html">Concejos financieros Biblicos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link color" href="estaPagina.html">¿Por qué este sitio web?</a>
+              </li>
+            
+          </ul>
+        </div>
+      </nav>
+</header>
+   
+    
+    <form class="form-control container-sm">
+        <label >Capacidad de endeudamiento = (IngresoMensual - GastosFijos ) * porcentaje </label>
+        <h2>Calcular Capacidad de endeudamiento</h2>
+        <div class="form-row">
+          <div class="col">
+            <input required type="text" class="form-control" placeholder="Ingrese su ingreso mensual" type="number" id="ingresoMensual">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <input required type="text" class="form-control" placeholder="Ingrese sus gastos fijos mensuales" type="number" id="gastosFijos">
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputState">Porcentaje </label>
+                <sub class="bg-info"> Los expertos recomiendan no superar el <strong>40%</strong> de tus ingresos mensuales fuera de gastos fijos.</sub>
+                <select required id="porcentaje" class="form-control" onchange="ShowSelected()">
+                    <option selected disabled>Seleccione</option>
+                    <option value="0.35">0,35</option>
+                    <option value="0.36">0,36</option>
+                    <option value="0.37">0,37</option>
+                    <option value="0.38">0,38</option>
+                    <option value="0.39">0,39</option>
+                    <option value="0.40">0,40</option>
+                </select>
+            
+        
+        </div>
+    </label>
+        <button type="button" class="btn btn-outline-success" type="button" onclick="capturar()">calcular Capacidad de endeudamiento</button>
+        <Strong><label class="text-success" id="total"></label></Strong>   
+    </form>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
